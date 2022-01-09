@@ -1,0 +1,40 @@
+jQuery(document).ready(function($) {
+    
+	
+	$("#ec-load-more-btn").click(function(){
+		let next_page = parseInt($("#current-page").val())+1;
+		$("#current-page").val(next_page);
+		let current_cat = $("#current-category").val();
+		let current_sorting = $("#current-sorting").val();
+		let current_order = $("#current-order").val();
+		let current_tag = $("#current-tag").val();
+		let tempScrollTop = $(window).scrollTop();
+		$("#ec-load-more-btn").hide();
+		$(".ec-ajax-loading").show();
+		$.ajax({
+			url: ec_blog_ajax_obj.ajaxurl,
+			data: {
+				'action': 'ec_blog_load_ajax_request',
+				'next_page' : next_page,
+				'current_cat': current_cat,
+				'current_sorting': current_sorting,
+				'current_order': current_order,
+				'current_tag': current_tag
+			},
+			success:function(data) {
+				$(".ec-blog-bottom-items .ec-blog-item-container").append(data);
+				$(window).scrollTop(tempScrollTop);
+				$("#ec-load-more-btn").show();
+				$(".ec-ajax-loading").hide();
+			},
+			error: function(errorThrown){
+				console.log(errorThrown);
+			}
+		});  
+	});
+		
+		
+
+
+              
+});

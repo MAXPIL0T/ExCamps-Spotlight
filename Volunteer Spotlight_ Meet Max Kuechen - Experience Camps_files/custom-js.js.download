@@ -1,0 +1,403 @@
+// var $ = jQuery;
+
+jQuery(document).ready(function($) {	
+	
+	$(".give-btn-level-4").text($(".give-btn-level-4").text()+"/mo");
+	$(".give-btn-level-5").text($(".give-btn-level-5").text()+"/mo");
+	$(".give-btn-level-6").text($(".give-btn-level-6").text()+"/mo");
+	$(".give-btn-level-7").text($(".give-btn-level-7").text()+"/mo");
+	
+	let monthly_btns = '<li><button type="button" class="give-donation-level-btn give-btn give-btn-level-monthly-ec" value="10">$10/mo</button></li><li><button type="button" class="give-donation-level-btn give-btn give-btn-level-monthly-ec" value="25">$25/mo</button></li><li><button type="button" class="give-donation-level-btn give-btn give-btn-level-monthly-ec" value="50" >$50/mo</button></li><li><button type="button" class="give-donation-level-btn give-btn give-btn-level-monthly-ec" value="100" >$100/mo</button></li>';
+	
+	//$('.give-recurring-form #give-donation-level-button-wrap').append(monthly_btns);
+	
+    $("#give-once-button").on('mousedown touchstart', function(){
+        var checkBoxes = $("#give-admin_choice-108");
+        //checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+		checkBoxes.prop( "checked", false );
+		$("._give_is_donation_recurring").val(0);
+		$("#give-monthly-button").removeClass("recurring-active");
+		$("#give-once-button").addClass("recurring-active");
+		
+		$(".give-btn-level-1").click();
+		
+		//$("#give-admin_choice-108").click();
+		
+		document.getElementById("give-monthly-button").disabled = false;
+		document.getElementById("give-once-button").disabled = true;
+		$(".give-btn-level-0, .give-btn-level-1, .give-btn-level-2, .give-btn-level-3").show();
+		
+		$(".give-btn-level-4, .give-btn-level-5, .give-btn-level-6, .give-btn-level-7").hide();
+		$(".give-btn-level-monthly-ec").hide();
+        $('.ec-first-btn').text("DONATE");
+		$('.ec-donate-header .title-monthly').hide();
+		$('.ec-donate-header .title-once').show();
+		$('.text-once').show();
+		$('.text-monthly').hide();
+    });
+	
+	$("#give-monthly-button").on('mousedown touchstart', function(){
+        var checkBoxes = $("#give-admin_choice-108");
+        //checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+		checkBoxes.prop( "checked", true );
+		$("._give_is_donation_recurring").val(1);
+		$("#give-monthly-button").addClass("recurring-active");
+		$("#give-once-button").removeClass("recurring-active");
+		
+		$(".give-btn.give-btn-level-5").click();
+		
+		//$("#give-admin_choice-108").click();
+		
+		document.getElementById("give-once-button").disabled = false;
+		document.getElementById("give-monthly-button").disabled = true;
+		$(".give-btn-level-0, .give-btn-level-1, .give-btn-level-2, .give-btn-level-3").hide();
+		$(".give-btn-level-4, .give-btn-level-5, .give-btn-level-6, .give-btn-level-7").show();
+		$(".give-btn-level-monthly-ec").show();
+		$('.ec-first-btn').text("DONATE MONTHLY");
+	    $('.ec-donate-header .title-once').hide();
+		$('.ec-donate-header .title-monthly').show();
+		$('.text-once').hide();
+		$('.text-monthly').show();
+    }); 
+	
+	$("#give-donation-level-button-wrap button").on('mousedown touchstart', function(){
+        var amount = $(this).val();
+		if(amount !== "custom"){
+			$(".ec-giving-amount").text(amount);
+			//jQuery(".give-total-wrap").hide();
+		}
+    }); 
+
+	$(".give-donation-amount #give-amount").bind("change", function() { 
+        var amount = $(this).val();
+		$(".ec-giving-amount").text(amount);
+		let width_change = ((amount.replace(/\,/g,'')).length)*23;
+		$(this).width(width_change);
+    }); 
+	
+	$("#give-tributes-no-108").bind("change", function() { 
+        var option_select = $(this).val();
+		if(option_select == "no"){
+			$("#give-tributes-none-108").click();
+		}
+    }); 
+	
+	
+	
+	$(".give-donation-amount #give-amount").keydown (function (e) {
+		var amount = $(this).val();
+		$(".ec-giving-amount").text(amount);
+		let width_change = ((amount.replace(/\,/g,'')).length)*30;
+		$(this).width(width_change);
+	});
+
+	
+	$(".ec-edit-amt-btn").click(function() {
+        jQuery(".ec-donate-section").hide();
+		jQuery(".ec-donate-header").hide();
+		jQuery(".give-do-validate").hide();
+		jQuery(".cc-address").hide();
+		jQuery(".give-donation-submit").hide();
+		jQuery(".ec-donate-page1").slideDown();
+		jQuery("#give-once-button, #give-monthly-button").show();
+    });
+	
+	$(".give-donation-level-btn.give-btn-level-custom").on('mousedown touchstart', function(){
+		jQuery(".give-total-wrap").show();
+    }); 
+	
+	
+	$("#give-first, #give-last").keyup(function(){
+		var full_name = $("#give-first").val()+" "+$("#give-last").val();
+		$(".card-name").val(full_name);
+		//console.log(full_name);
+	});
+	
+	
+	$("#give-gateway-radio-list input").click(function() {
+        $(".ec-next-btn").hide();
+		$(".payment-loading").show();
+        setTimeout(function(){
+		   	$(".ec-next-btn").show();
+			$(".payment-loading").hide();
+			//Move Custom Fields
+			if($('#give-ffm-section').length){
+				let ec_give_wp_custom_fields = $('#give-ffm-section').detach();
+				ec_give_wp_custom_fields.insertBefore('.ec-donate-page2 .ec-next-btn');
+			}
+		}, 2000);
+    });
+	if($('.emitter').length){
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			if (scroll >= 250) {
+				$('.emitter').css("background-image", 'url(' + $('.emitter').data("src") + ')');
+			}
+		});
+	}
+	
+	//Move Custom Fields
+	if($('#give-ffm-section').length){
+		let ec_give_wp_custom_fields = $('#give-ffm-section').detach();
+		ec_give_wp_custom_fields.insertBefore('.ec-donate-page2 .ec-next-btn');
+	}
+	
+	function ds_setup_collapsible_submenus() {
+		var $menu = $('.et_mobile_menu'),
+	  	top_level_link = '.et_mobile_menu .menu-item-has-children > a';
+	  	$menu.find('a').each(function() {
+			$(this).off('click');
+			if ( $(this).is(top_level_link) ) {
+			  $(this).attr('href', '#');
+			}
+			if ( ! $(this).siblings('.sub-menu').length ) {
+			  $(this).on('click', function(event) {
+				$(this).parents('.mobile_nav').trigger('click');
+			  });
+			} else {
+			  $(this).on('click', function(event) {
+				event.preventDefault();
+				$(this).parent().toggleClass('visible');
+			  });
+			}
+	  	});
+	}
+	$(window).load(function() {
+	  setTimeout(function() {
+		ds_setup_collapsible_submenus();
+	  }, 700);
+	});
+	
+	
+	
+	// Lazy Load Background Images
+	$('.lazy-bg-load').each(function() {
+		let bg_url = $(this).data('bg-load');
+		$(this).css('background-image','url('+bg_url+')')
+	});
+
+// 	function make_popup_clickable(){
+// 	console.log($('.pum-container'));
+	
+// }
+// 	Make the entire pop-up clickable except the close button
+// 	year end v1 2021
+$('#popmake-10070.pum-container.popmake ').each(function() {	
+  var link = $(this).html();
+  $(this).wrap('<a href="https://www.classy.org/give/381391/#!/donation/checkout?c_src=YE2021-pop-up-1"></a>');
+});
+$('#popmake-10070 .pum-content.popmake-content').each(function() {	
+  var link = $(this).html();
+  $(this).wrap('<a href="https://www.classy.org/give/381391/#!/donation/checkout?c_src=YE2021-pop-up-1"></a>');
+});
+	// 	year end v2 2021
+	$('#popmake-10112.pum-container.popmake ').each(function() {	
+  var link = $(this).html();
+  $(this).wrap('<a href="https://www.classy.org/give/382349/#!/donation/checkout?c_src=YE2021-pop-up-2"></a>');
+});
+$('#popmake-10112 .pum-content.popmake-content').each(function() {	
+  var link = $(this).html();
+  $(this).wrap('<a href="https://www.classy.org/give/382349/#!/donation/checkout?c_src=YE2021-pop-up-2"></a>');
+});
+}); // end on load
+
+function check_form_page_errors(next_page){
+	
+	if(next_page == 2) {
+		var give_amt = $("#give-amount").val();
+		$(".ec-giving-amount").text(give_amt);
+		if(!give_amt){
+			return "page 1 error";
+		}
+	}
+	
+	if(next_page == 3) {
+		var f_name = $("#give-first").val();
+		var l_name = $("#give-last").val();
+		var email = $("#give-email").val();
+		if(!f_name || !l_name || !email){
+			return "Please fill in all the required (*) fields.";
+		}
+	}
+	
+	if(next_page == 4) {
+		if($('#give-tributes-yes-108').is(':checked')) {
+			var f_name = $("#give-tributes-first-name-108").val();
+			if(!f_name){
+				return "Please fill in all the required (*) fields.";
+			}
+		}
+		if($('#give-tributes-send-an-ecard-108').is(':checked')) {
+			var f_name = $("#give-tributes-ecard-notify-first-name-108").val();
+			var email = $("#give-tributes-send-ecard-email-108").val();
+			if(!f_name || !email){
+				return "Please fill in all the required (*) fields.";
+			}
+		}
+	}
+	
+
+	return false;	
+}
+
+
+function ec_next_page(next_page){
+
+	
+	var is_errors = false;
+	is_errors = check_form_page_errors(next_page);
+	
+	if(is_errors !== false){
+		alert(is_errors);
+		return;
+	}
+	jQuery(".ec-donate-section").hide();
+	jQuery(".give-do-validate").hide();
+	jQuery(".cc-address").hide();
+	jQuery(".give-donation-submit").hide();
+	jQuery("#give-once-button, #give-monthly-button").hide();
+	if(next_page == 4){
+		jQuery(".give-do-validate").slideDown();
+		jQuery(".cc-address").slideDown();
+		jQuery(".give-donation-submit").slideDown();
+	}else{
+		jQuery(".ec-donate-page"+next_page).slideDown();
+	}
+	jQuery(".ec-donate-header").show();
+	$([document.documentElement, document.body]).animate({
+		scrollTop: $(".ec-donate-header").offset().top
+	}, 10);
+}
+
+
+// Owl Carousel
+jQuery(document).ready(function($) {	
+	$(".camper-stories-container").owlCarousel({
+		margin:10,
+		nav:true,
+		autoplay: false,
+		autoplayTimeout: 8000,
+ 		margin: 50,
+		stagePadding: 45,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:3
+			}
+		}
+	});
+	
+	$(".fundraiser-events-container").owlCarousel({
+		margin:10,
+		nav:true,
+		autoplay: false,
+		autoplayTimeout: 8000,
+ 		margin: 50,
+		stagePadding: 45,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:2
+			}
+		}
+	});
+	
+	$(".ec-the-news-container").owlCarousel({
+		margin:10,
+		autoplay: false,
+		autoplayTimeout: 8000,
+ 		margin: 40,
+		stagePadding: 0,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:2
+			}
+		}
+	});
+	
+	$(".our-community-container").owlCarousel({
+		margin:10,
+		nav:true,
+		autoplay: false,
+		autoplayTimeout: 8000,
+ 		margin: 50,
+		stagePadding: 45,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:3
+			}
+		}
+	});
+	
+	$(".ec-grief-resources-container").owlCarousel({
+		margin:10,
+		nav:true,
+		autoplay: false,
+		autoplayTimeout: 8000,
+ 		margin: 40,
+		stagePadding: 0,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:2
+			}
+		}
+	});
+	
+});
+
+
+function ec_redirect(url){
+	window.location.href = url;
+}
+
+function display_date_item(item_id){
+	let tempScrollTop = $(window).scrollTop();
+	$(".ec-dates-container-list").hide();
+	$("#"+item_id)
+		.css('display','flex')
+		.hide()
+		.fadeIn(1000);
+// 	$("#"+item_id).addClass("show-details-item");
+// 	$(".ec-dates-container-list").addClass("hide-list-items");
+	$(window).scrollTop(tempScrollTop);
+}
+
+function hide_date_items(){
+	let tempScrollTop = $(window).scrollTop();
+	$(".date-details-item").hide();
+	$(".ec-dates-container-list").show();
+// 	$(".ec-dates-container-list").removeClass("hide-list-items");
+// 	$(".date-details-item").removeClass("show-details-item");
+	//$(".ec-dates-container-inner .ec-dates-container-details").hide();
+	$(window).scrollTop(tempScrollTop);
+}
+
+

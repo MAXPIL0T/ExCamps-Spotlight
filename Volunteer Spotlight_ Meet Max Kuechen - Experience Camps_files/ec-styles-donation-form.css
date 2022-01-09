@@ -1,0 +1,344 @@
+/* header donation form */
+
+.give-btn.give-btn-recurring {
+	background-color: #fff;
+	color: #000;
+	font-weight:500;
+    font-size: 18px;
+	text-transform: uppercase;
+	border: none;
+	width: 50%;
+/* 	border-right: 1px solid #ff6720; */
+}
+
+.give-btn {
+	padding: 12px 0;
+}
+
+.ec-donate-page1 .text-once,
+.ec-donate-page1 .text-monthly {
+	font-size: 21px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.give-donation-amount {
+	border-bottom: 3px solid #333;
+	width: 80% !important;
+}
+
+#give-card-address-2-wrap {
+	display: none;
+}
+
+@media only screen and (max-width: 430px) {
+  	.give-btn.give-btn-recurring {
+		font-size: 12px;
+	}
+	#give-donation-level-button-wrap li {
+		width: 33% !important;
+	}
+	#give-donation-level-button-wrap li:last-child {
+		width: 67% !important;
+	}
+	.give-donation-level-btn {
+		font-size: 17px !important;
+	}
+	
+	.ec-donate-header {
+		width: 108% !important;
+    	margin-left: -4% !important;
+    	margin-top: -20px !important;
+	}
+}
+
+#give-payment-mode-wrap {
+	margin-top:10px;
+}
+
+.recurring-active {
+	background-color: #ff6720 !important;
+	color: #fff !important;
+	cursor: default;
+}
+
+#give-donation-level-button-wrap {
+
+}
+
+#give-donation-level-button-wrap li {
+	width: 33.33%;
+	padding:0px !important;
+}
+
+#give-donation-level-button-wrap li:last-child {
+	width: 66.67%;
+}
+
+#give-donation-level-button-wrap li:last-child button {
+	width:97.5%;
+}
+
+#give-donation-level-button-wrap li button {
+	width: 95%;
+}
+
+.give-goal-progress {
+  display: none;
+}
+
+.give-donation-level-btn {
+	background-color: #457bc5;
+	color: #fff;
+	font-weight: bold;
+    font-size: 20px;
+	border: 4px solid #457bc5;
+}
+
+.give-donation-level-btn:hover, .give-default-level {
+	background-color: #fff;
+	color: #457bc5;
+}
+
+
+.give-recurring-donors-choice {
+	display: none !important;
+}
+
+
+.give-form-title, .give-payment-mode-label, .give-section-break.give-tributes-legend, #card_address_2, .give-tributes-ecard-personalized-message-left {
+	display: none !important;
+}
+
+.give-fl-wrap.give-fl-wrap-textarea {
+	margin-bottom: 8px;
+}
+
+.give-tributes-grab-info {
+	margin-top: 10px;
+}
+
+.give-gateway-option {
+	text-transform: uppercase;
+}
+
+
+#give-gateway-radio-list {
+	text-align: center;
+}
+
+form[id*=give-form] #give-gateway-radio-list>li {
+	display: inline-block !important;
+	margin-right: 15px;
+    margin-left: 0;
+}
+
+form.give-form .form-row-wide, form[id*=give-form] .form-row-wide {
+    margin: auto !important;
+/*     text-align: center; */
+    display: block;
+    margin-bottom: 20px !important;
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol {
+	border: none !important;
+    background: none;
+    padding: 0px;
+    height: auto;
+    line-height: initial;
+    display: inline-block;
+    float: none;
+	font-size: 32px;
+	font-weight: 800;
+}
+
+form[id*=give-form] .give-donation-amount #give-amount {
+    border: none;
+    padding: 0px;
+    height: auto;
+    line-height: initial;
+    width: 100px;
+    text-align: left;
+    min-width: 83px;
+    display: inline-block;
+    margin: auto;
+    float: none;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+#give-card-address-wrap {
+	margin-bottom: 0;
+}
+
+.give-btn.give-btn-reveal {
+	background-color: #4298b5;
+	color: #fff;
+	font-family: 'Recoleta';
+	font-weight: bold;
+    font-size: 28px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	width: 100%;
+}
+
+.give-btn.give-btn-reveal:hover {
+	background-color: #fff;
+	color: #4298b5;
+	border: 1px solid #4298b5;
+}
+
+
+#donate-banner {
+	min-height:5px;
+}
+
+.give-total-wrap {
+	text-align: center;
+}
+
+.give-donation-amount {
+	display: block;
+	width: 165px;
+	margin: auto !important;
+	margin-bottom: 15px !important;
+}
+
+.ec-donate-header {
+	display:none;
+}
+
+.give-tributes-show-wrap {
+	padding-bottom: 6px !important;
+}
+
+.ec-donate-header {
+    color: #4298b5;
+	width: 121.1%;
+    margin-left: -10.5%;
+    margin-top: -23px;
+    text-align: center;
+    padding-top: 12px;
+    margin-bottom: 15px;
+    background-color: #457bc5;
+    color: #fff;
+}
+.ec-donate-header h4 {
+	display:inline-block;
+	font-weight: 800;
+	color: white;
+}
+
+.ec-edit-amt-btn {
+	color: #94d3fe;	
+}
+
+.title-monthly, .text-monthly {
+	display: none;
+}
+
+.ec-donate-section, .give-donation-submit, .cc-address {
+    /*border-bottom: 14px solid red !important;*/
+    padding-top: 21px;
+    padding-bottom: 20px;
+}
+
+.ec-donate-page2,
+.ec-donate-page3,
+.ec-donate-page4,
+.give-do-validate,
+.cc-address,
+.give-donation-submit {
+ 	display: none;
+}
+
+
+.ec-next-btn, .give-submit.give-btn {
+	background-color: #ff6720;
+    font-weight: bold;
+    font-size: 19px;
+    color: #fff;
+    padding: 11px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+	clear: both;
+	text-transform: uppercase;
+}
+
+.ec-next-btn:hover {
+	cursor:pointer;
+}
+
+#give-donation-level-button-wrap>li {
+    list-style-type: none;
+    list-style-image: none;
+    float: left;
+    margin: 0 ; 
+}	
+
+#give-donation-level-button-wrap .give-donation-level-btn {
+        margin: 0 5px 5px 0;
+}
+
+#give-donation-level-button-wrap:after, #give-donation-level-button-wrap:before {
+    display: none;
+}
+
+
+/* monthly buttons */
+.give-btn-level-4,
+.give-btn-level-5,
+.give-btn-level-6,
+.give-btn-level-7 {
+	display: none;
+}
+
+
+
+/* spinner */
+
+.spinner {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #457bc5;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+

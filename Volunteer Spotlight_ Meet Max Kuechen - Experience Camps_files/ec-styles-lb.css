@@ -1,0 +1,288 @@
+p {
+	font-size: 18px;
+}
+
+/* Fundraising page customizations */
+.circle-text-container {
+	display: flex;
+    align-items: center;
+}
+
+.rectangle-text {
+	background-color: #457bc5;
+    padding: 15px 0;
+	margin-left: 30px;
+	float: left;
+	width: 330px;
+	text-align: center;
+}
+
+.rectangle-text p {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0;
+}
+
+.dd-company-selected {
+	font-size: 16px;
+}
+
+.circletag {
+	float: left;
+    display: block;
+	min-width: 90px;
+	height: 90px;
+    background: #457bc5;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+	border: 15px solid #457bc5;
+}
+
+.circletag>img {
+   max-height: 90%;
+   max-width: 90%;
+}
+
+.circle-text-container:hover .rectangle-text {
+	background-color: #000;
+}
+
+.circle-text-container:hover .circletag {
+	background-color: #000;
+    border: 15px solid #000;
+}
+
+@media only screen and (max-width: 435px) {
+  .circletag {
+    min-width: 75px;
+	height: 75px;
+  }
+	
+	.rectangle-text {
+		margin-left: 15px;
+	}
+}
+
+@media (min-width: 436px) and (max-width: 523px) {
+  .circletag {
+    max-width: 80px;
+	min-height: 80px;
+  }
+}
+
+/* Volunteer page customizations */
+
+.orange-bullet-points ul {
+  list-style: none;
+}
+
+.orange-bullet-points li {
+	padding-bottom: 15px;
+}
+
+.orange-bullet-points ul li::before {
+  content: "\2022";
+  color: #ff6700;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.align-center-btn-text {
+	text-align: center;
+}
+
+/* Get Involved page customizations */
+.get-involved-icons {
+	width: 120px;
+}
+.ec-mailchimp-signup-container .get-involved-signup-button {
+	background-color: #457bc5 !important;
+}
+
+.ec-mailchimp-signup-container .get-involved-signup-button:hover {
+	box-shadow: inset 0px 0px 0px 4px #5e88c4 !important;
+    -webkit-box-shadow: inset 0px 0px 0px 4px #457bc5;
+    -moz-box-shadow: inset 0px 0px 0px 4px #457bc5;
+	color: #fff !important;
+	background-color: #5e88c4 !important;
+}
+
+@media (min-width: 922px) and (max-width: 974px) {
+	.ec-mailchimp-signup-container .get-involved-signup-button {
+		margin-top: 20px !important;
+	}
+}
+
+/* Homepage customizations */
+.facts-on-grief-img {
+	max-width: 35%;
+}
+
+.ec-mailchimp-signup-container.signup-homepage #mce-EMAIL, .ec-mailchimp-signup-container.signup-homepage #mce-FNAME, .ec-mailchimp-signup-container.signup-homepage #mce-LNAME {
+	background-color: #f8f1e8;
+}
+
+/* Grief Resources customizations */
+.nagc-rainbow-bg-button {
+  background-color: #457bc5;
+  background-image: linear-gradient(50deg, #f6c835, #c40468, #0086cf);
+}
+
+.et_pb_searchsubmit {
+	font-family: 'CircularXXWeb-Bold' !important;
+}
+
+/* The Issue customizations */
+
+@media (min-width: 981px) and (max-width: 1250px) {
+	.graph-bars {
+		width: 330px !important;
+	}
+}
+
+@media (min-width: 1251px) and (max-width: 1495px) {
+	.graph-bars {
+		width: 330px !important;
+	}
+}
+
+	
+/* General elements */
+.ec-image-section {
+	min-height: 600px !important;
+}
+
+
+.et_pb_video_play:before {
+    font-family: ETmodules;
+    content: "\e04e";
+    color: #ff6720;
+    display: block;
+}
+.et_pb_video_overlay .et_pb_video_play:after {
+    content: ' ';
+    background: #fff;
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+/* Mobile fixes */
+
+.owl-prev, .owl-next {
+	min-height: 60px;
+}
+
+/* Footer menus */
+.footer-column-menu ul {
+	display: block !important;
+}
+
+.footer-column-menu ul li a {
+	margin: 0 auto;
+}
+
+/* Newsletter signup responsiveness */
+
+#mc_embed_signup_scroll {
+	text-align: center;
+}
+
+.ec-mailchimp-signup-container input {
+	border-radius: 0;
+}
+
+@media (min-width: 769px) and (max-width: 921px) {
+	.signup-button {
+		margin-top: 20px !important;
+	}
+}
+
+@media (min-width: 922px) and (max-width: 980px) {
+	.ec-mailchimp-signup-container #mce-EMAIL, .ec-mailchimp-signup-container #mce-FNAME, .ec-mailchimp-signup-container #mce-LNAME {
+		width: 220px !important;
+	}
+}
+
+@media (min-width: 981px) and (max-width: 1120px) {
+	.ec-mailchimp-signup-container #mce-EMAIL, .ec-mailchimp-signup-container #mce-FNAME, .ec-mailchimp-signup-container #mce-LNAME {
+		width: 170px !important;
+	}
+	
+	.ec-mailchimp-signup-container #mc_embed_signup .signup-button {
+		padding: 15px 30px !important;
+	}
+}
+
+@media (min-width: 1101px) and (max-width: 1251px) {
+	.ec-mailchimp-signup-container #mce-EMAIL, .ec-mailchimp-signup-container #mce-FNAME, .ec-mailchimp-signup-container #mce-LNAME {
+		width: 200px !important;
+	}
+	
+	.ec-mailchimp-signup-container #mc_embed_signup .signup-button {
+		padding: 15px 40px !important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#mc_embed_signup_scroll {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 500px;
+		margin: auto;
+	}
+
+	.ec-mailchimp-signup-container #mc_embed_signup .mc-field-group {
+		display: inline-block;
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+	.name-field-group {
+		flex-basis: 49%;
+	}
+
+	.email-field-group {
+		flex-basis: 100%;
+		margin-top: 15px;
+	}
+}
+
+/* Blog page */
+.search_form, .search_title {
+	text-align: center;
+}
+
+.search-section-blog {
+	padding-bottom: 50px;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+#searchsubmit {
+	background-color: #457bc5;
+	color: #fff;
+    border: none;
+	padding: 16px;
+	font-size: 15px;
+	font-family: 'CircularXXWeb-Bold' !important;
+	text-transform: uppercase;
+}
+
+#s {
+	background-color: #f8f1e8;
+	border-color: #f8f1e8;
+	padding: 16px;
+	font-size: 15px;
+}

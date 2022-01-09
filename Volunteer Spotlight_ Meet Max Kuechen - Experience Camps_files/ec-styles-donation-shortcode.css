@@ -1,0 +1,224 @@
+/* Progress bar */
+.give-progress-bar {
+	height: 30px;
+}
+.give-progress-bar, .give-progress-bar>span {
+	border-radius: 6px;
+}
+
+.bar_amt_ec span {
+	z-index: 3;
+    background: rgba(255,255,255,0.5);
+}
+
+.current-income {
+    position: absolute;
+    top: 30px;
+    transform: translateX(-50%);
+    width: 100px;
+    display: block;
+    text-align: right;
+    z-index: 1;
+    color: #ff6720;
+    font-size: 26px;
+}
+/* .current-income:after {
+    content: ' ';
+    position: absolute;
+    height: 70px;
+    width: 2px;
+    background: #ff6720;
+    z-index: 2;
+	right: -10px;
+} */
+.ec-custom-goal-container {
+	display:block !important;
+}
+.raised, .hideme {
+	display:none;
+}
+.bar_amt_ec .first_goal {
+	float:left;
+}
+.bar_amt_ec .second_goal {
+	float:right;
+}
+.ec_custom_progress{
+	display:none;
+	clear:both;
+	width:100%;
+	position:relative;
+	padding-top:60px;
+}
+.ec_custom_progress.reached-target{
+	display:block;
+}
+.bar_amt_ec {
+	display:block;
+	clear:both;
+	width:100%;
+}
+.middle_goal_1 {
+	position:absolute;
+	left: 33%;
+	display:block;
+	width: 100px;
+	margin-left: -50px;
+}
+
+.middle_goal_2 {
+	position:absolute;
+	left: 66%;
+	display:block;
+	width: 100px;
+	margin-left: -50px;
+}
+
+
+.ec_custom_progress.reached-target {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ec_target_container {
+	text-align:center;
+}
+
+.ec_target_item {
+	display: inline;
+	padding: 35px;
+	background-color: #fbf6ef;
+    font-size: 30px;
+	font-weight: 800;
+	display: inline-block;
+}
+
+.ec_target_item .ec-line {
+    display: block;
+    width: 50%;
+    margin-top: 15px;
+}
+.ec_target_item .ec-line:before {
+	width:100%;
+}
+
+.ec_target_item.reached-target {
+	background-color: #457bc5;
+	color: #fff;
+	font-size: 30px;
+	position: relative;
+	color:#fff;
+}
+
+.target-title {
+	font-size:14px;
+	display:block;
+	margin:auto;
+	text-align: center;
+}
+.target-text {
+	font-size:14px;
+	display:none;
+	margin:auto;
+	text-align: center;
+}
+
+@media (min-width: 981px) and (max-width: 1189px) {
+	.give-btn.give-btn-recurring {
+		font-size:13px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.target-text {
+		font-size:12px;
+		line-height: 16px;
+	}
+	.ec_target_item {
+		font-size: 18px !important;
+	}
+	.ec_target_item {
+		padding: 30px 5px !important;
+	}
+}
+
+@media only screen and (max-width: 572px) {
+	.ec_target_item.reached-target {
+		max-height: 150px;
+		min-height: 150px;
+	}
+	
+	.ec_target_item {
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.middle_goal_1, .middle_goal_2 {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.target-text {
+		font-size:10px;
+	}
+	.current-income {
+		top: 40px;
+		width: 60px;
+		text-align: center;
+		font-size: 13px;
+	}
+}
+
+.ec_target_item.reached-target .target-text {
+	display:block;
+}
+
+.payment-loading {
+	display:none;
+}
+
+.reached-target {
+    padding: 60px 20px 60px;
+}
+
+
+.ec-progress-bar {
+    background-color: #457bc5 !important;
+	width:0%;
+	transition: all 4s ease;
+}
+.current-income {
+	transition: all 4s ease;
+	left:0%;
+
+	font-weight: 600;
+}
+
+.ec_target_bar_1 .middle_goal_1, 
+.ec_target_bar_1 .middle_goal_2,
+.ec_target_bar_2 .middle_goal_1, 
+.ec_target_bar_2 .middle_goal_2 {
+	display:none;
+}
+
+
+/* Confetti */
+.emitter {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.et_pb_section_1.et_pb_section.grief-resource-buttons {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.et_pb_row.et_pb_row_2.grief-resources-callout{
+	max-width:700px;
+}

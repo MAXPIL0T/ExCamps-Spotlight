@@ -1,0 +1,246 @@
+/* 
+ * This File is not yet active and needs some revisions, the intention of this file is to preserve older pop-up css  */
+
+/* Popup for New York 2021 Styling 
+.pum-theme-ec-full-screen-light-box .pum-container {
+    padding-top: 250px !important;
+    padding-bottom: 100px !important;
+	text-align: center;
+}
+
+.ec-video-donation-section{
+	padding: 0px 0px 0px 0px;
+}
+
+.et_pb_module.et_pb_image.et_pb_image_0.image-august-2021-campaign{
+	padding-top: 76px;
+}
+
+.pum-content.popmake-content{
+	background-color:rgba( 69, 123, 197, 0.5);
+    padding: 15px 0px 15px 0px;
+}
+
+.pum-content.popmake-content h3 {
+	padding-bottom: 0px;
+}
+
+.pum-content.popmake-content .ec-pop-up-location-h3 {
+	color: #ff6720;
+    font-size: 38px;
+}
+
+.pum-content.popmake-content .ec-pop-up-event-info {
+	font-size: 27px;
+    padding-bottom: 0px;
+}
+*/
+
+/*  Miami 2021 Popup styling
+ * 
+ * .pum-theme-ec-full-screen-light-box .pum-container {
+    padding-top: 250px !important;
+    padding-bottom: 100px !important;
+	text-align: center;
+}
+
+div#popmake-9517 {
+	padding-left: 0px!important;
+	padding-right: 0px!important;
+}
+
+.ec-video-donation-section{
+	padding: 0px 0px 0px 0px;
+}
+
+.et_pb_module.et_pb_image.et_pb_image_0.image-august-2021-campaign{
+	padding-top: 76px;
+}
+
+.pum-content.popmake-content{
+	background-color:rgba( 69, 123, 197, 0.5);
+    padding: 15px 220px 15px 200px;
+	float: right;
+}
+
+@media screen and (min-width: 1500px){
+	.pum-content.popmake-content{
+	background-color:rgba( 69, 123, 197, 0.5);
+    padding: 15px 220px 15px 200px;
+	float: right;
+}
+	
+}
+@media screen and (max-width: 1498px){
+	.pum-content.popmake-content{
+    padding: 15px 118px 15px 118px;
+}
+	
+}
+
+@media screen and (max-width: 1200px){
+	.pum-content.popmake-content{
+    padding: 15px 73px 15px 73px;
+}
+	
+}
+@media screen and (max-width: 768px){
+	.pum-content.popmake-content{
+	background-color:rgba( 69, 123, 197, 0.5);
+    padding: 15px 170px 15px 170px;
+	float: right;
+}
+	
+}
+
+
+@media screen and (max-width: 578px){
+	.pum-content.popmake-content{
+
+    padding: 15px 60px 15px 60px;
+
+}
+ .pum-theme-9519 .pum-container, .pum-theme-ec-full-screen-light-box-2 .pum-container {
+    	padding: 90px;
+}
+	
+}
+
+.pum-content.popmake-content h3 {
+	padding-bottom: 0px;
+}
+
+.pum-content.popmake-content .ec-pop-up-location-h3 a {
+	color: #ff6720;
+    font-size: 38px;
+}
+
+.pum-content.popmake-content .ec-pop-up-event-info {
+	font-size: 27px;
+    padding-bottom: 0px;
+}
+
+.pum-content.popmake-content .ec-pop-up-event-info a {
+	color: #ffffff; 
+}
+
+.pum-content.popmake-content .ec-pop-up-event-slogan a {
+	color: #ffffff; 
+}
+*/
+/*-------------- Giving Tuesday ------------- */
+/* #pum_popup_title_9920.pum-title.popmake-title {
+	padding-top: 10px;
+	font-weight: 700;
+	text-align: center!important;
+	margin-right: 15px;
+}
+#pum_popup_title_9920.pum-title.popmake-title:before {
+	content: "GI"url(https://experiencecamps.org/wp-content/uploads/2021/11/White-Heart-e1637950123663.png)"ING";
+ }
+#popmake-9920 .pum-content.popmake-content{
+	margin-top: 30em;
+}
+.pum-content.popmake-content .giving-tuesday-pop-up-center p{
+	font-size:30px;
+}
+.pum-content.popmake-content .giving-tuesday-pop-up-center p a.ec-btn-orange-popup{
+    font-size: 25px;
+	padding: 14px;
+	min-width: 220px;
+}
+
+div.giving-tuesday-pop-up-center p img {
+	position: absolute;
+	right: 25px;
+	top: 85px;
+	
+}
+
+@media screen and (max-width: 578px){
+
+.pum-content.popmake-content .giving-tuesday-pop-up-center p {
+    font-size: 20px;
+}
+	
+#pum_popup_title_9920.pum-title.popmake-title {
+	font-size: 16px;
+	padding-top:0;
+	}
+
+	#popmake-9920 .pum-content.popmake-content {
+    margin-top: 7em;
+}
+	.pum-content.popmake-content .giving-tuesday-pop-up-center p a.ec-btn-orange-popup {
+    font-size: 20px;
+    padding: 13px;
+    min-width: 184px;
+}
+	#pum_popup_title_9920.pum-title.popmake-title:before {
+	content: "GI"url(https://experiencecamps.org/wp-content/uploads/2021/11/White-Heart-mobile-e1638204929622.png)"ING";
+ }
+} */
+
+/* ------------ YEAR END ------------------ */
+
+#pum_popup_title_10070.pum-title.popmake-title, #pum_popup_title_10112.pum-title.popmake-title{
+	padding-top: 10px;
+    font-weight: 700;
+    text-align: center!important;
+    padding-bottom: 10px;
+    background-color: #ff6720;
+    font-size: 39px;
+}
+#popmake-10070 .pum-content.popmake-content, #popmake-10112 .pum-content.popmake-content{
+	margin-top: 30em;
+}
+.pum-content.popmake-content .giving-tuesday-pop-up-center p{
+	font-size:35px;
+}
+.pum-content.popmake-content .giving-tuesday-pop-up-center p a.ec-btn-orange-popup{
+    font-size: 25px;
+	padding: 14px;
+	min-width: 220px;
+}
+
+#popmake-10112 .pum-content.popmake-content .giving-tuesday-pop-up-center p a.ec-btn-orange-popup {
+    font-size: 25px;
+    padding: 14px;
+    min-width: 279px;
+}
+
+div.giving-tuesday-pop-up-center p img {
+	position: absolute;
+	right: 25px;
+	top: 85px;
+	
+}
+
+@media screen and (max-width: 578px){
+
+.pum-content.popmake-content .giving-tuesday-pop-up-center p {
+    font-size: 20px;
+}
+	
+#pum_popup_title_10070.pum-title.popmake-title, #pum_popup_title_10112.pum-title.popmake-title {
+	font-size: 16px;
+	padding-top:0;
+	padding-bottom:0;
+	}
+
+	#popmake-10070 .pum-content.popmake-content, #popmake-10112 .pum-content.popmake-content {
+    margin-top: 7em;
+}
+	.pum-content.popmake-content .giving-tuesday-pop-up-center p a.ec-btn-orange-popup {
+    font-size: 20px;
+    padding: 13px;
+    min-width: 184px;
+ }
+}
+
+.pum-content.popmake-content, .pum-title.popmake-title, .pum-container{
+	cursor: pointer;
+} 
+button.popmake-close {
+	display: none;
+}
